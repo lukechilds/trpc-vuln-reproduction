@@ -8,4 +8,5 @@ And then has the suggested WebSocket configuration applied from here: https://we
 
 Any tRPC 11 server with WebSocket enabled with a `createContext` method set is vulnerable. Here is an example:
 
-![](trpc-vuln.mp4)
+https://github.com/user-attachments/assets/ce1b2d32-6103-4e54-8446-51535b293b05
+
