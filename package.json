@@ -5,6 +5,7 @@
   "scripts": {
     "dev:server": "tsx src/server",
     "dev:client": "wait-port 3000 && tsx src/client",
+    "dev:malicious-client": "src/malicious-client.js",
     "dev": "run-p dev:* --print-label",
     "lint": "eslint --cache src",
     "type-check": "tsc",
