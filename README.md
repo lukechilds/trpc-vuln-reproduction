@@ -26,7 +26,7 @@ Since this is all triggered from the WebSocket `message` event there is no highe
 
 This means any tRPC 11 server with WebSockets enabled can be crashed by an attacker sending an invalid connectionParams object. It doesn't matter if the server doesn't make user of connectionParams, the connectionParams logic can be initiated by the client.
 
-To fix this vulnerability tRPC should not rethrow the error after it's be handled. This patch fixes the vulnerability:
+To fix this vulnerability tRPC should not rethrow the error after it's be handled. [This patch](/trpc-11-websocket-vuln-fix.patch) fixes the vulnerability:
 
 ```patch
 From 5747b1d11946f60268eb86c59784bd6f7eb50abd Mon Sep 17 00:00:00 2001
