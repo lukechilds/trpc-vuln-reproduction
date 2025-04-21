@@ -1,20 +1,11 @@
-# Express Minimal Example
+# tRPC 11 WebSocket Vulnerability Report
 
-## Includes
+This repo includes an example tRPC 11 WebSocket server and proof of concept vulnerability. It's based on the `express-minimal` example from here:
 
-- Express server
-- Vanilla TRPCClient in Node
+https://github.com/trpc/trpc/tree/8cef54eaf95d8abc8484fe1d454b6620eeb57f2f/examples/express-minimal
 
-## Usage
+And then has the suggested WebSocket configuration applied from here: https://web.archive.org/web/20250419150818/https://trpc.io/docs/server/websockets
 
-Run the server and client:
+Any tRPC 11 server with WebSocket enabled with a `createContext` method set is vulnerable. Here is an example:
 
-```bash
-yarn start
-```
-
-Tip: Try changing either the procedure name or it's input on the server and see the client type-erroring.
-
----
-
-Created by [Julius](https://github.com/juliusmarminge).
+![](/trpc-vuln.mp4)
