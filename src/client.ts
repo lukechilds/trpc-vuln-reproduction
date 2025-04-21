@@ -1,3 +1,4 @@
+import { setTimeout } from "node:timers/promises";
 import { createTRPCClient, createWSClient, wsLink } from "@trpc/client";
 import type { AppRouter } from "./router";
 
@@ -23,12 +24,11 @@ async function main() {
   try {
     const withoutInputQuery = await client.hello.greeting.query();
     console.log(withoutInputQuery);
-
-    const withInputQuery = await client.hello.greeting.query({ name: "Alex" });
-    console.log(withInputQuery);
   } catch (error) {
     console.error("Error:", error);
   }
+  await setTimeout(500);
+  process.exit(0);
 }
 
 void main();

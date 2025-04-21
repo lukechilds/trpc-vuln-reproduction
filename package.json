@@ -3,8 +3,8 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev:server": "tsx watch src/server",
-    "dev:client": "wait-port 3000 && tsx watch src/client",
+    "dev:server": "tsx src/server",
+    "dev:client": "wait-port 3000 && tsx src/client",
     "dev": "run-p dev:* --print-label",
     "lint": "eslint --cache src",
     "type-check": "tsc",
